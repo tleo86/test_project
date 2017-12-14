@@ -1,21 +1,41 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import ReactDOM from 'react-dom';
+
+import Table from './components/table';
+import Thead from './components/Thead';
+import Modal from './components/modal';
+import Btmd from './components/Btmd';
+
+
+
 import './App.css';
+
+import { connect } from  "react-redux"
+
+
 
 class App extends Component {
   render() {
+    console.log(this.props.things);
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+      <div>
+          <div className= 'App-header'>
+            <h1>Тестовое задание </h1>
+          </div>
+             <table>
+                <Thead />
+                <Table />
+            </table>
+            <Btmd />
+            <div id ='myModal' className="modal">
+                <Modal />
+            </div>
+        </div>
+        );
   }
 }
-
-export default App;
+export default connect (
+state => ({
+things: state}),
+dispatch=> ({})
+)(App);
