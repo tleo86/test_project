@@ -3,7 +3,7 @@ import ThingLIst from '../containers/things-list';
 import '../App.css';
 
 const Table = () => (
-<tbody>
+<tbody className= 'tblthng'>
       <ThingLIst />
 </tbody>
 );

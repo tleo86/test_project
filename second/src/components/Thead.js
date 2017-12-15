@@ -5,6 +5,7 @@ import '../App.css';
 const Thead = () => (
 <thead>
        <tr>
+          <th> Select </th>
           <th> ID </th>
           <th> Name </th>
           <th> Quentity </th>
